@@ -23,7 +23,4 @@ public class NewAccountService {
             System.out.println("New user created: " + userDto.getUsername());
         return dbService.saveUser(userMapper.mapUserDtoToUser(userDto));
         }
-    }
-
-
 }
