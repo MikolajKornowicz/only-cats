@@ -20,11 +20,8 @@ public class NewAccountService {
     }
 
     public Users createNewUser  (UserDto userDto){
-        if(comparePasswords(userDto.getPassword(), userDto.getRepeatPassword())){
             System.out.println("New user created: " + userDto.getUsername());
         return dbService.saveUser(userMapper.mapUserDtoToUser(userDto));
-        } else {
-            return new Users(0L, "a", "a", "a", "a", "a");
         }
     }
 
